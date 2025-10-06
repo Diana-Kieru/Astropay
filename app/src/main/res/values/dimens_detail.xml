@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Transaction Detail Dimensions -->
+    <dimen name="detail_icon_size">88dp</dimen>
+    <dimen name="detail_icon_radius">44dp</dimen>
+    <dimen name="detail_icon_padding">24dp</dimen>
+    
+    <dimen name="timeline_indicator_size">40dp</dimen>
+    <dimen name="timeline_indicator_radius">20dp</dimen>
+    <dimen name="timeline_line_width">2dp</dimen>
+    <dimen name="timeline_line_min_height">60dp</dimen>
+    
+    <dimen name="detail_spacing_small">8dp</dimen>
+    <dimen name="detail_spacing_medium">16dp</dimen>
+    <dimen name="detail_spacing_large">24dp</dimen>
+    <dimen name="detail_spacing_xlarge">32dp</dimen>
+    <dimen name="detail_spacing_xxlarge">48dp</dimen>
+    
+    <dimen name="retry_button_radius">8dp</dimen>
+    <dimen name="retry_button_padding_horizontal">32dp</dimen>
+    <dimen name="retry_button_padding_vertical">12dp</dimen>
+    
+    <dimen name="flag_icon_size">40dp</dimen>
+</resources>

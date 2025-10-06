@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="200dp"
+    android:viewportWidth="300"
+    android:viewportHeight="200">
+    <!-- Circular pattern -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#26A17B"
+        android:strokeWidth="1"
+        android:pathData="M250,100m-80,0a80,80 0,1 1,160 0a80,80 0,1 1,-160 0"/>
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#26A17B"
+        android:strokeWidth="1"
+        android:pathData="M250,100m-100,0a100,100 0,1 1,200 0a100,100 0,1 1,-200 0"/>
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#26A17B"
+        android:strokeWidth="0.5"
+        android:pathData="M250,100m-120,0a120,120 0,1 1,240 0a120,120 0,1 1,-240 0"/>
+</vector>
+
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+    
+    <!-- Black stripe -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M0,0 L40,0 L40,10 L0,10 Z"/>
+    
+    <!-- Red stripe -->
+    <path
+        android:fillColor="#BA0C2F"
+        android:pathData="M0,10 L40,10 L40,30 L0,30 Z"/>
+    
+    <!-- Green stripe -->
+    <path
+        android:fillColor="#006B3F"
+        android:pathData="M0,30 L40,30 L40,40 L0,40 Z"/>
+    
+    <!-- White borders -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,8 L40,8 L40,10 L0,10 Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,30 L40,30 L40,32 L0,32 Z"/>
+    
+    <!-- Shield (simplified) -->
+    <path
+        android:fillColor="#BA0C2F"
+        android:pathData="M20,15 L15,18 L15,25 L20,28 L25,25 L25,18 Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,16 L16,18.5 L16,24.5 L20,27 L24,24.5 L24,18.5 Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M20,17 L17,19 L17,24 L20,26 L23,24 L23,19 Z"/>
+</vector>

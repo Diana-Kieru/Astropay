@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Transaction Detail Strings -->
+    <string name="timeline_title">Timeline</string>
+    <string name="transfer_details_title">Transfer details</string>
+    <string name="see_breakdown">See breakdown</string>
+    <string name="retry">Retry</string>
+    <string name="balance">balance</string>
+    
+    <!-- Timeline Status Messages -->
+    <string name="timeline_created">Transaction created</string>
+    <string name="timeline_processing">We are processing your transaction</string>
+    <string name="timeline_on_the_way">Your transaction is on the way</string>
+    <string name="timeline_failed">Your transfer failed and the money returned to your wallet</string>
+    <string name="timeline_completed">Transfer completed successfully</string>
+    <string name="timeline_pending">Waiting for confirmation</string>
+</resources>
