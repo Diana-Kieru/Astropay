@@ -40,14 +40,13 @@ data class TransactionDetail(
 class TransactionDetailFragment : Fragment() {
 
     private lateinit var btnBack: ImageView
-    private lateinit var ivTransactionIcon: ImageView
     private lateinit var tvRecipientName: TextView
     private lateinit var tvAmount: TextView
     private lateinit var tvDateTime: TextView
     private lateinit var timelineContainer: LinearLayout
-    private lateinit var btnRetry: TextView
     private lateinit var btnSeeBreakdown: TextView
     private lateinit var tvBalanceAmount: TextView
+    private lateinit var btnViewReceipt: TextView
 
     private var transactionDetail: TransactionDetail? = null
 
@@ -81,13 +80,12 @@ class TransactionDetailFragment : Fragment() {
 
     private fun initViews(view: View) {
         btnBack = view.findViewById(R.id.btnBack)
-        ivTransactionIcon = view.findViewById(R.id.ivTransactionIcon)
         tvRecipientName = view.findViewById(R.id.tvRecipientName)
         tvAmount = view.findViewById(R.id.tvAmount)
         tvDateTime = view.findViewById(R.id.tvDateTime)
-        btnRetry = view.findViewById(R.id.btnRetry)
         btnSeeBreakdown = view.findViewById(R.id.btnSeeBreakdown)
         tvBalanceAmount = view.findViewById(R.id.tvBalanceAmount)
+        btnViewReceipt = view.findViewById(R.id.btnViewReceipt)
     }
 
     private fun setupListeners() {
@@ -95,12 +93,12 @@ class TransactionDetailFragment : Fragment() {
             parentFragmentManager.popBackStack()
         }
 
-        btnRetry.setOnClickListener {
-            retryTransaction()
-        }
-
         btnSeeBreakdown.setOnClickListener {
             showBreakdown()
+        }
+
+        btnViewReceipt.setOnClickListener {
+            viewReceipt()
         }
     }
 
@@ -161,22 +159,7 @@ class TransactionDetailFragment : Fragment() {
                 tvAmount.paintFlags = tvAmount.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
             }
 
-            // Set transaction icon
-            when (detail.transactionType) {
-                TransactionType.MONEY_SENT -> {
-                    ivTransactionIcon.setImageResource(R.drawable.ic_arrow_up)
-                }
-                TransactionType.MONEY_RECEIVED -> {
-                    ivTransactionIcon.setImageResource(R.drawable.ic_arrow_up)
-                    ivTransactionIcon.rotation = 180f
-                }
-                TransactionType.CURRENCY_EXCHANGE -> {
-                    ivTransactionIcon.setImageResource(R.drawable.ic_currency_exchange)
-                }
-                TransactionType.PAYMENT_LINK -> {
-                    ivTransactionIcon.setImageResource(R.drawable.ic_qr_payment)
-                }
-            }
+            // Transaction icon is now handled in the layout
 
             // Build timeline dynamically (since we can't use includes programmatically)
             // In production, you'd use a RecyclerView for timeline
@@ -184,18 +167,18 @@ class TransactionDetailFragment : Fragment() {
         }
     }
 
-    private fun retryTransaction() {
-        // Implement retry logic
+    private fun viewReceipt() {
+        // Implement view receipt logic
         android.widget.Toast.makeText(
             requireContext(),
-            "Retrying transaction...",
+            "Viewing receipt...",
             android.widget.Toast.LENGTH_SHORT
         ).show()
         
         // In real app:
-        // - Show loading indicator
-        // - Call API to retry transaction
-        // - Navigate back or update UI based on result
+        // - Navigate to receipt screen
+        // - Show PDF or receipt details
+        // - Allow sharing or printing
     }
 
     private fun showBreakdown() {
